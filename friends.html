@@ -1,7 +1,33 @@
 <html>
-<head>
-<title>friends</title>
-</head>
-<body>
+  <head>
+    <title>friends</title>
+    <script src='javascripts/drawing.js'></script>
+    <script>
+      var step = 0;
+      function draw() {
+        var canvas = document.getElementById("grid");
+        var w = canvas.width;
+        var h = canvas.height;
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
+          ctx.clearRect(0,0,w,h);
+          grid(ctx, w, h);
+          ctx.save();
+          ctx.translate(w/2, h/2);
+          pacman(ctx, 100, step);
+          //ghost(ctx, 100, 'rgb(255, 0, 0)', step);
+          ctx.restore();
+        }
+        step +=1;
+      }
+
+      function go() {
+        setInterval(draw, 1000);
+      }
+    </script>
+  </head>
+<body onload='go();'>
+<canvas id="grid" height="400" width="400">
+</canvas>
 </body>
 </html>
