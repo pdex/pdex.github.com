@@ -42,3 +42,18 @@ function grid(ctx, w, h) {
     origin_line(ctx, w);
     ctx.restore();
 }
+function pacman(ctx, scale, step) {
+    var steps = [
+        {begin: Math.PI/4, end: (7*Math.PI)/4},
+        {begin: Math.PI/6, end: (11*Math.PI)/6},
+    ];
+    var this_step = steps[step%steps.length];
+    ctx.save();
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.arc(0, 0, scale, this_step.begin, this_step.end);
+    ctx.fillStyle = 'yellow';
+    ctx.fill();
+    ctx.closePath();
+    ctx.restore();
+}
