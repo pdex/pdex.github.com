@@ -1,4 +1,4 @@
-# Created 2015-10-08 Thu 17:50
+# Created 2015-10-08 Thu 18:52
 #+TITLE: Pork Beef and Black Bean Chili
 #+AUTHOR: Chris Keating
 * Blurb
@@ -9,30 +9,30 @@ Borrowed with love from [[http://www.epicurious.com/recipes/food/views/pork-beef
 
 * Ingredients
 - Vegetables
-- 3 cups (675 g) diced fresh tomatoes
-- 3 cups (675 g) diced onions
-- 3 cups (675 g) diced red bell peppers
-- 6 garlic cloves, minced
-- 3 6-ounce cans tomato paste
-- 3 cups canned black beans, drained, rinsed (from three 15-ounce cans)
-- 1 cup (20 g)chopped fresh cilantro
+  - 3 cups (675 g) diced fresh tomatoes
+  - 3 cups (675 g) diced onions
+  - 3 cups (675 g) diced red bell peppers
+  - 6 garlic cloves, minced
+  - 3 6-ounce cans tomato paste
+  - 3 cups canned black beans, drained, rinsed (from three 15-ounce cans)
+  - 1 cup (20 g)chopped fresh cilantro
 - Spices
-- 2 tablespoons ground cumin
-- 2 tablespoons chili powder
-- 2 teaspoons dried oregano
-- 2 teaspoons salt
-- 1 teaspoon cayenne pepper
-- 2 teaspoons sugar
+  - 2 tablespoons ground cumin
+  - 2 tablespoons chili powder
+  - 2 teaspoons dried oregano
+  - 2 teaspoons salt
+  - 1 teaspoon cayenne pepper
+  - 2 teaspoons sugar
 - Proteins
-- 1 pound ground pork
-- 1 pound ground beef
-- 1 pound chuck steak, fat trimmed, cut into 1-inch cubes
+  - 1 pound ground pork
+  - 1 pound ground beef
+  - 1 pound chuck steak, fat trimmed, cut into 1-inch cubes
 - Liquids
-- 2 tablespoons olive oil
-- 2 cups water
-- 2 3/4 cups (about) beef broth
+  - 2 tablespoons olive oil
+  - 2 cups water
+  - 2 3/4 cups (about) beef broth
 - Garnish
-- Grated cheddar cheese
+  - Grated cheddar cheese
 
 * Steps
 1. Heat olive oil in heavy large pot over medium-high heat.
