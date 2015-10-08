@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!-- Created by htmlize-1.47 in css mode. -->
+<html>
+  <head>
+    <title>index.org</title>
+    <style type="text/css">
+    <!--
+      body {
+        color: #cccccc;
+        background-color: #181a26;
+      }
+      .org-block {
+        /* org-block */
+        color: #b3b3b3;
+      }
+      .org-block-begin-line {
+        /* org-block-begin-line */
+        color: #7f7f7f;
+      }
+      .org-block-end-line {
+        /* org-block-end-line */
+        color: #7f7f7f;
+      }
+      .org-level-1 {
+        /* org-level-1 */
+        color: #87ceff;
+      }
+      .org-link {
+        /* org-link */
+        color: #00ffff;
+        text-decoration: underline;
+      }
+      .org-tag {
+        /* org-tag */
+        font-weight: bold;
+      }
+
+      a {
+        color: inherit;
+        background-color: inherit;
+        font: inherit;
+        text-decoration: inherit;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    -->
+    </style>
+  </head>
+  <body>
+    <pre>
+<span class="org-level-1">* useful lisp for setting up emacs                                 </span><span class="org-level-1"><span class="org-tag">:noexport:</span></span>
+<span class="org-block-begin-line">#+BEGIN_EXAMPLE
+</span><span class="org-block">(setq org-publish-project-alist '(
+  ("recipes"
+    :base-directory "~/Dropbox/org-mode/mobile/recipes/"
+    :base-extension "org"
+    :publishing-directory "~/projects/pdex.github.com/recipes/"
+    :recursive t
+    :publishing-function (org-org-publish-to-org org-html-publish-to-html)
+    :section-numbers nil
+    :with-toc nil
+    ;; publish-to-org
+    :htmlized-source t
+    ;; publish-to-html
+    :html-head "&lt;link rel='stylesheet' href='recipe.css'&gt;"
+    :html-head-include-default-style nil
+    :html-head-include-scripts nil
+    :html-indent nil)
+  ("static"
+    :base-directory "~/Dropbox/org-mode/mobile/recipes/"
+    :base-extension "jpg\\|gif\\|png\\|css"
+    :publishing-directory "~/projects/pdex.github.com/recipes/"
+    :publishing-function org-publish-attachment)
+  ("website" :components ("recipes" "static"))
+))
+</span><span class="org-block-end-line">#+END_EXAMPLE
+</span>
+<span class="org-level-1">* Recipes</span>
+ * <span class="org-link"><a href="file:how_to_boil_water.org">How to Boil Water</a></span>
+   * <span class="org-link"><a href="file:how_to_boil_water.org.html">Source</a></span>
+ * <span class="org-link"><a href="file:pork_beef_and_black_bean_chili.org">Pork Beef and Black Bean Chili</a></span>
+   * <span class="org-link"><a href="file:pork_beef_and_black_bean_chili.org.html">Source</a></span>
+</pre>
+  </body>
+</html>

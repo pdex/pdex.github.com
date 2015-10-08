@@ -1,0 +1,52 @@
+/* bits borrowed from here
+http://flour-and-water-theme.pixelunion.net/
+*/
+body {
+    background: #f2eee6 url(recipe_bg.gif) repeat center center;
+    height: 100%;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    font:13px/1.5 Arial, sans-serif;
+    font-smoothing: antialiased;
+    line-height: 24px;
+}
+.ingredients ul {
+    list-style: none;
+}
+.ingredients ul ul {
+    list-style: disc;
+}
+.steps ol ul {
+    list-style: none;
+}
+/* flex box */
+#content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+}
+#content img {
+    width: 100%;
+}
+
+.source { order: 2; }
+.blurb, .source, .ingredients, .steps {
+    flex: 0 1 100%;
+}
+
+/* Large screens */
+@media all and (min-width: 800px) {
+    
+    .ingredients { flex: 0 1 49%; }
+    .steps { flex: 0 1 49%; }
+}
+.blurb h2 { display: none; }
+.pictures { display: none; }
+/* debug colors */
+/*
+.blurb {background: tomato;}
+.source {background: gold;}
+.ingredients {background: deepskyblue;}
+.steps {background: hotpink;}
+#postamble {background: lightgreen;}
+*/

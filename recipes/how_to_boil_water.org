@@ -1,0 +1,40 @@
+# Created 2015-10-08 Thu 17:32
+#+TITLE: How to Boil Water
+#+AUTHOR: Chris Keating
+
+
+* Blurb
+Boiling means bringing water to 212 degrees Fahrenheit for cooking.
+But you don’t need a thermometer to boil water.
+The process to boil water (or any other kind of liquid) is simple, and you need to follow only a few steps.
+
+* Source
+Transcribed from [[http://www.dummies.com/how-to/content/how-to-boil-water.html][dummies.com]]
+
+* Ingredients
+- Vegetables
+  - None
+- Spices
+  - None
+- Proteins
+  - None
+- Liquids
+  - 2 cups water
+- Garnish
+  - None
+
+* Steps
+1. Put some water in a pan or pot.
+   - Don’t fill it to the top, or the water will splash out of the pan when it boils!
+   - [[#step_1_pic]]
+2. Place the pan on your stovetop and turn the burner to the highest setting.
+   - Your stovetop probably has a “Hi” or “Max” setting.
+   - [[#step_2_pic]]
+3. Let the water come to a full rolling boil (when the bubbles are rapidly breaking the surface).
+   - Covering the pot speeds the process by trapping surface heat.
+   - [[#step_3_pic]]
+
+* Pictures
+** [[file:how_to_boil_water_1.jpg]]
+** [[file:how_to_boil_water_2.jpg]]
+** [[file:how_to_boil_water_3.jpg]]

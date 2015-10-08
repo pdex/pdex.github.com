@@ -1,0 +1,51 @@
+# Created 2015-10-08 Thu 17:50
+#+TITLE: Pork Beef and Black Bean Chili
+#+AUTHOR: Chris Keating
+* Blurb
+A southwestern style red chili. Basically a thick meat paste with vegetables.
+
+* Source
+Borrowed with love from [[http://www.epicurious.com/recipes/food/views/pork-beef-and-black-bean-chili-107280][Epicurious]]
+
+* Ingredients
+- Vegetables
+- 3 cups (675 g) diced fresh tomatoes
+- 3 cups (675 g) diced onions
+- 3 cups (675 g) diced red bell peppers
+- 6 garlic cloves, minced
+- 3 6-ounce cans tomato paste
+- 3 cups canned black beans, drained, rinsed (from three 15-ounce cans)
+- 1 cup (20 g)chopped fresh cilantro
+- Spices
+- 2 tablespoons ground cumin
+- 2 tablespoons chili powder
+- 2 teaspoons dried oregano
+- 2 teaspoons salt
+- 1 teaspoon cayenne pepper
+- 2 teaspoons sugar
+- Proteins
+- 1 pound ground pork
+- 1 pound ground beef
+- 1 pound chuck steak, fat trimmed, cut into 1-inch cubes
+- Liquids
+- 2 tablespoons olive oil
+- 2 cups water
+- 2 3/4 cups (about) beef broth
+- Garnish
+- Grated cheddar cheese
+
+* Steps
+1. Heat olive oil in heavy large pot over medium-high heat.
+2. Add ground pork and ground beef and sauté until brown, about 3 minutes.
+3. Add cubed beef and garlic and sauté 5 minutes.
+4. Add 2 cups water; bring to boil.
+5. Add cumin, chili powder, oregano, salt, and cayenne pepper.
+6. Reduce heat, cover, and simmer 10 minutes.
+7. Add tomato paste and sugar and simmer 5 minutes.
+8. Add tomatoes, onions, and peppers and simmer until vegetables are tender, about 30 minutes.
+9. Add black beans and cilantro to chili.
+10. Add beef broth 3/4 cup at a time, until thinned to desired consistency. (Can be prepared 1 day ahead. Refrigerate uncovered until cold, then cover and keep refrigerated.)
+11. Bring chili to simmer. Ladle hot chili into bowls; top with grated cheddar cheese and serve. [[#donezo]]
+
+* Pictures
+** [[file:pork_beef_and_black_bean_chili.jpg]]
