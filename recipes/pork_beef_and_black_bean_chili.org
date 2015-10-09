@@ -1,6 +1,8 @@
-# Created 2015-10-08 Thu 18:52
+# Created 2015-10-08 Thu 23:58
 #+TITLE: Pork Beef and Black Bean Chili
 #+AUTHOR: Chris Keating
+
+
 * Blurb
 A southwestern style red chili. Basically a thick meat paste with vegetables.
 
