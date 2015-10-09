@@ -87,80 +87,85 @@
     <pre>
 <span class="org-level-1">* useful lisp for setting up emacs                                 </span><span class="org-level-1"><span class="org-tag">:noexport:</span></span>
 <span class="org-block-begin-line">#+begin_src elisp
-</span>(<span class="keyword">progn</span>
+</span>  (<span class="keyword">progn</span>
 
-(<span class="keyword">require</span> '<span class="constant">s</span>)
-(<span class="keyword">require</span> '<span class="constant">ox</span>)
+  (<span class="keyword">require</span> '<span class="constant">s</span>)
+  (<span class="keyword">require</span> '<span class="constant">ox</span>)
 
-(<span class="keyword">defun</span> <span class="function-name">recipe-headline-class</span> (tree backend info)
-  <span class="doc">"Set :HTML_CONTAINER_CLASS property to the headline text 
+  (<span class="keyword">defun</span> <span class="function-name">recipe-headline-class</span> (tree backend info)
+    <span class="doc">"Set :HTML_CONTAINER_CLASS property to the headline text 
 
-TREE is the parse tree being exported.  BACKEND is the export
-back-end used.  INFO is a plist used as a communication channel.
+  TREE is the parse tree being exported.  BACKEND is the export
+  back-end used.  INFO is a plist used as a communication channel.
 
-Assume BACKEND is `</span><span class="doc"><span class="constant">recipe-html</span></span><span class="doc">'."</span>
-  (org-element-map tree 'headline
-    (<span class="keyword">lambda</span> (e)
-      (<span class="keyword">let</span> ((title (s-downcase (org-element-property <span class="builtin">:raw-value</span> e))))
-        (print (concat <span class="string">"DEBUG "</span> title))
-        (<span class="keyword">unless</span> (s-starts-with? <span class="string">"[["</span> title)
-          (org-element-put-property e <span class="builtin">:HTML_CONTAINER_CLASS</span> title)))))
-  <span class="comment-delimiter">;; </span><span class="comment">Return updated tree.
-</span>  tree)
+  Assume BACKEND is `</span><span class="doc"><span class="constant">recipe-html</span></span><span class="doc">'."</span>
+    (org-element-map tree 'headline
+      (<span class="keyword">lambda</span> (e)
+        (<span class="keyword">let</span> ((title (s-downcase (org-element-property <span class="builtin">:raw-value</span> e))))
+          (<span class="keyword">unless</span> (s-starts-with? <span class="string">"[["</span> title)
+            (org-element-put-property e <span class="builtin">:HTML_CONTAINER_CLASS</span> title)))))
+    <span class="comment-delimiter">;; </span><span class="comment">Return updated tree.
+</span>    tree)
 
-(org-export-define-derived-backend 'recipe-html 'html
-  <span class="builtin">:filters-alist</span> '((<span class="builtin">:filter-parse-tree</span> . recipe-headline-class)))
+  (org-export-define-derived-backend 'recipe-html 'html
+    <span class="builtin">:filters-alist</span> '((<span class="builtin">:filter-parse-tree</span> . recipe-headline-class)))
 
-(<span class="keyword">defun</span> <span class="function-name">org-html-publish-to-recipe-html</span> (plist filename pub-dir)
-  <span class="doc">"Publish an org file to HTML.
+  (<span class="keyword">defun</span> <span class="function-name">org-html-publish-to-recipe-html</span> (plist filename pub-dir)
+    <span class="doc">"Publish an org file to HTML.
 
-FILENAME is the filename of the Org file to be published.  PLIST
-is the property list for the given project.  PUB-DIR is the
-publishing directory.
+  FILENAME is the filename of the Org file to be published.  PLIST
+  is the property list for the given project.  PUB-DIR is the
+  publishing directory.
 
-Return output file name."</span>
-    (org-publish-org-to 'recipe-html filename
-                      (concat <span class="string">"."</span> (or (plist-get plist <span class="builtin">:html-extension</span>)
-                                      org-html-extension
-                                      <span class="string">"html"</span>))
-                      plist pub-dir))
+  Return output file name."</span>
+      (org-publish-org-to 'recipe-html filename
+                        (concat <span class="string">"."</span> (or (plist-get plist <span class="builtin">:html-extension</span>)
+                                        org-html-extension
+                                        <span class="string">"html"</span>))
+                        plist pub-dir))
 
-(setq org-publish-project-alist '(
-  (<span class="string">"recipes"</span>
-    <span class="builtin">:base-directory</span> <span class="string">"~/Dropbox/org-mode/mobile/recipes/"</span>
-    <span class="builtin">:base-extension</span> <span class="string">"org"</span>
-    <span class="builtin">:publishing-directory</span> <span class="string">"~/projects/pdex.github.com/recipes/"</span>
-    <span class="builtin">:recursive</span> t
-    <span class="builtin">:publishing-function</span> (org-org-publish-to-org org-html-publish-to-recipe-html)
-    <span class="builtin">:section-numbers</span> nil
-    <span class="builtin">:with-toc</span> nil
-    <span class="comment-delimiter">;; </span><span class="comment">publish-to-org
-</span>    <span class="builtin">:htmlized-source</span> t
-    <span class="comment-delimiter">;; </span><span class="comment">publish-to-html
-</span>    <span class="builtin">:html-head</span> <span class="string">"&lt;link rel='stylesheet' href='recipe.css'&gt;"</span>
-    <span class="builtin">:html-head-include-default-style</span> nil
-    <span class="builtin">:html-head-include-scripts</span> nil
-    <span class="builtin">:html-indent</span> nil
-    <span class="builtin">:html-validation-link</span> <span class="string">""</span>)
-  (<span class="string">"static"</span>
-    <span class="builtin">:base-directory</span> <span class="string">"~/Dropbox/org-mode/mobile/recipes/"</span>
-    <span class="builtin">:base-extension</span> <span class="string">"jpg</span><span class="string"><span class="regexp-grouping-backslash">\\</span></span><span class="string"><span class="regexp-grouping-construct">|</span></span><span class="string">gif</span><span class="string"><span class="regexp-grouping-backslash">\\</span></span><span class="string"><span class="regexp-grouping-construct">|</span></span><span class="string">png</span><span class="string"><span class="regexp-grouping-backslash">\\</span></span><span class="string"><span class="regexp-grouping-construct">|</span></span><span class="string">css"</span>
-    <span class="builtin">:publishing-directory</span> <span class="string">"~/projects/pdex.github.com/recipes/"</span>
-    <span class="builtin">:publishing-function</span> org-publish-attachment)
-  (<span class="string">"website"</span> <span class="builtin">:components</span> (<span class="string">"recipes"</span> <span class="string">"static"</span>))
-))
+  (<span class="keyword">defun</span> <span class="function-name">html-postamble</span> (info)
+    (<span class="keyword">let</span> ((file (file-name-nondirectory (plist-get info <span class="builtin">:input-file</span>)))
+          (date (format-time-string (plist-get info <span class="builtin">:html-metadata-timestamp-format</span>)))
+          (author (org-export-data (plist-get info <span class="builtin">:author</span>) info)))
+      (concat
+       <span class="string">"&lt;p class=\"author\"&gt;Author: "</span> author <span class="string">"&lt;/p&gt;\n"</span>
+       <span class="string">"&lt;p class=\"date\"&gt;Date: "</span> date <span class="string">"&lt;/p&gt;\n"</span>
+       <span class="string">"&lt;p class=\"org_source\"&gt;&lt;a href=\""</span> file <span class="string">".html\"&gt;org source&lt;/a&gt;&lt;/p&gt;"</span>
+       )))
 
-<span class="comment-delimiter">;; </span><span class="comment">progn
-</span>)
+  (setq org-publish-project-alist '(
+    (<span class="string">"recipes"</span>
+      <span class="builtin">:base-directory</span> <span class="string">"~/Dropbox/org-mode/mobile/recipes/"</span>
+      <span class="builtin">:base-extension</span> <span class="string">"org"</span>
+      <span class="builtin">:publishing-directory</span> <span class="string">"~/projects/pdex.github.com/recipes/"</span>
+      <span class="builtin">:recursive</span> t
+      <span class="builtin">:publishing-function</span> (org-org-publish-to-org org-html-publish-to-recipe-html)
+      <span class="builtin">:section-numbers</span> nil
+      <span class="builtin">:with-toc</span> nil
+      <span class="comment-delimiter">;; </span><span class="comment">publish-to-org
+</span>      <span class="builtin">:htmlized-source</span> t
+      <span class="comment-delimiter">;; </span><span class="comment">publish-to-html
+</span>      <span class="builtin">:html-head</span> <span class="string">"&lt;link rel='stylesheet' href='recipe.css'&gt;"</span>
+      <span class="builtin">:html-head-include-default-style</span> nil
+      <span class="builtin">:html-head-include-scripts</span> nil
+      <span class="builtin">:html-indent</span> nil
+      <span class="builtin">:html-postamble</span> html-postamble)
+    (<span class="string">"static"</span>
+      <span class="builtin">:base-directory</span> <span class="string">"~/Dropbox/org-mode/mobile/recipes/"</span>
+      <span class="builtin">:base-extension</span> <span class="string">"jpg</span><span class="string"><span class="regexp-grouping-backslash">\\</span></span><span class="string"><span class="regexp-grouping-construct">|</span></span><span class="string">gif</span><span class="string"><span class="regexp-grouping-backslash">\\</span></span><span class="string"><span class="regexp-grouping-construct">|</span></span><span class="string">png</span><span class="string"><span class="regexp-grouping-backslash">\\</span></span><span class="string"><span class="regexp-grouping-construct">|</span></span><span class="string">css"</span>
+      <span class="builtin">:publishing-directory</span> <span class="string">"~/projects/pdex.github.com/recipes/"</span>
+      <span class="builtin">:publishing-function</span> org-publish-attachment)
+    (<span class="string">"website"</span> <span class="builtin">:components</span> (<span class="string">"recipes"</span> <span class="string">"static"</span>))
+  ))
+
+  <span class="comment-delimiter">;; </span><span class="comment">progn
+</span>  )
 <span class="org-block-end-line">#+end_src
 </span>
 <span class="org-level-1">* Recipes</span>
  * <span class="org-link"><a href="file:how_to_boil_water.org">How to Boil Water</a></span>
-   * <span class="org-link"><a href="file:how_to_boil_water.org.html">Source</a></span>
  * <span class="org-link"><a href="file:pork_beef_and_black_bean_chili.org">Pork Beef and Black Bean Chili</a></span>
-   * <span class="org-link"><a href="file:pork_beef_and_black_bean_chili.org.html">Source</a></span>
-
-<span class="org-link"><a href="index.org.html">Source</a></span>
 </pre>
   </body>
 </html>
