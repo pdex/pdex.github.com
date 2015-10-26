@@ -1,6 +1,12 @@
-# Created 2015-10-09 Fri 01:31
+# Created 2015-10-26 Mon 11:57
 #+TITLE: 
 #+AUTHOR: Chris Keating
 * Recipes
 - [[file:how_to_boil_water.org][How to Boil Water]]
 - [[file:pork_beef_and_black_bean_chili.org][Pork Beef and Black Bean Chili]]
+- [[file:cold_brew_coffee.org][Cold Brew Coffee]]
+- [[file:sunday_night_gumbo.org][Sunday Night Gumbo]]
+- [[file:gourmet_mushroom_risotto.org][Gourmet Mushroom Risotto]]
+- [[file:seared_scallops_with_mushroom_risotto.org][Seared Scallops with Mushroom Risotto]]
+- [[file:roux.org][Roux]]
+- [[file:glogg.org][Glögg]]

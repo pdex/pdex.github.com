@@ -1,6 +1,9 @@
 /* bits borrowed from here
 http://flour-and-water-theme.pixelunion.net/
 */
+
+@import 'lesshat';
+
 body {
   background: #f2eee6 url(http://pdex.github.io/recipes/recipe_bg.gif) repeat center center;
   height: 100%;
@@ -25,17 +28,10 @@ body {
 /* flex box */
 
 #content {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-box-pack: left;
-  -webkit-justify-content: left;
-  -ms-flex-pack: left;
-  justify-content: left;
+  .display(flex);
+  .flex-direction(row);
+  .flex-wrap(wrap);
+  .justify-content(flex-start);
 }
 
 #content img {
@@ -43,35 +39,23 @@ body {
 }
 
 .source {
-  -webkit-box-ordinal-group: 3;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
+  .order(2);
 }
 
 .blurb,
 .source,
 .ingredients,
 .steps {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 100%;
-  -ms-flex: 0 1 100%;
-  flex: 0 1 100%;
+  .flex(0 1 100%);
 }
 /* Large screens */
 
 @media all and (min-width: 800px) {
   .ingredients {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 1 49%;
-    -ms-flex: 0 1 49%;
-    flex: 0 1 49%;
+    .flex(0 1 49%);
   }
   .steps {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 1 49%;
-    -ms-flex: 0 1 49%;
-    flex: 0 1 49%;
+    .flex(0 1 49%);
   }
 }
 
@@ -83,10 +67,11 @@ body {
   display: none;
 }
 /* debug colors */
-/*
+@debug: false;
+body when(@debug) {
 .blurb {background: tomato;}
 .source {background: gold;}
 .ingredients {background: deepskyblue;}
 .steps {background: hotpink;}
 #postamble {background: lightgreen;}
-*/
+}

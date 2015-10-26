@@ -1,0 +1,20 @@
+# Created 2015-10-26 Mon 11:53
+#+TITLE: Seared Scallops with Mushroom Risotto
+#+AUTHOR: Chris Keating
+
+
+* Source
+cribbed from [[http://www.foodnetwork.com/recipes/tyler-florence/risotto-with-wild-mushrooms-and-scallops-recipe.html][foodnetwork.com]]
+
+* Ingredients
+- Proteins
+  - Scallops
+- Liquids
+  - 2 TSP Olive Oil
+- Already Prepared
+  - [[file:mushroom_risotto.org][Risotto]]
+
+* Steps
+1. Place a large, deep skillet over medium-high heat and drizzle with a 2-count of oil.
+2. When the oil is hot, sprinkle the scallops with salt and pepper and brown well on both sides, about 2 minutes.
+3. Serve over [[file:mushroom_risotto.org][Risotto]]

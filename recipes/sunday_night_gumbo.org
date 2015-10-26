@@ -1,0 +1,31 @@
+# Created 2015-10-26 Mon 11:53
+#+TITLE: Sunday Night Gumbo
+#+AUTHOR: Chris Keating
+
+
+* Ingredients
+- 8 cups of broth.
+- 1/2 lbs of okra.
+- 1 1/2 lbs of vine ripened tomatoes.
+- 1 lb smoked linguiça sausage
+- 1 cloves of garlic
+- 2 habanero peppers
+
+* Steps
+1. Dice tomatoes.
+2. Dice peppers.
+3. Dice garlic.
+4. Cut okra into 1/4 inch pieces.
+5. Cut the sausage into 1/4 inch pieces.
+6. Make a [[file:roux.org][Roux]]
+7. Add broth to the Roux.
+8. Add tomatoes to the Gumbo.
+9. Add peppers and the garlic.
+10. Add sausage.
+11. Boil for 15 minutes.
+12. Add okra and simmer for 15 minutes or until okra is tender.
+
+* Notes
+Add Filé powder to thicken after cooking is done.
+
+Serve over freshly cooked rice.

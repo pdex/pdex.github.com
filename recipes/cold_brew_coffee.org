@@ -1,0 +1,7 @@
+# Created 2015-10-26 Mon 11:53
+#+TITLE: Cold Brew Coffee
+#+AUTHOR: Chris Keating
+
+
+* Notes
+- [[http://coffeegeek.com/guides/icedcoffee][coffeegeek.com]]
