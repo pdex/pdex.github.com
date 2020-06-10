@@ -1,0 +1,4 @@
+* steal formatting
+  - https://www.man7.org/linux/man-pages/man1/ls.1.html
+* steal structure
+  - http://www.linuxhowtos.org/System/creatingman.htm
