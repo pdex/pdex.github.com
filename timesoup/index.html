@@ -3,6 +3,13 @@
   <title>t i m e s o u p</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.0/brython.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.0/brython_stdlib.min.js"></script>
+  <style>
+    .parasoup {
+      text-align: center;
+      vertical-align: middle;
+    }
+    
+  </style>
 </head> 
 
 <body onload="brython(1)">
@@ -51,7 +58,8 @@ from browser import document, alert
 
 document["soup"] <= getsoup()
 </script>
-
-  <p>Today is <span id="soup"></span></p>
+  <div class="container">
+    <p class="parasoup">Today is <span id="soup"></span></p>
+  </div>
 </body> 
 </html>
