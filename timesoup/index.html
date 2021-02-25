@@ -7,8 +7,6 @@
 
 <body onload="brython(1)">
 <script type="text/python">
-
-
 from datetime import date;
 
 teens_lookup = {
@@ -50,16 +48,10 @@ def getsoup():
   return soup
 
 from browser import document, alert
-from browser.widgets.dialog import InfoDialog
 
-def echo(ev):
-    InfoDialog("Hello", f"Hello {document['zone'].value} !")
-
-document["test"].bind("click", echo)
 document["soup"] <= getsoup()
 </script>
-<p>Your name is : <input id="zone" autocomplete="off">
-<button id="test">click !</button>
+
   <p>Today is <span id="soup"></span></p>
 </body> 
 </html>
