@@ -56,7 +56,7 @@ def echo(ev):
     InfoDialog("Hello", f"Hello {document['zone'].value} !")
 
 document["test"].bind("click", echo)
-document["soup"].innerText = getsoup()
+document["soup"] <= getsoup()
 </script>
 <p>Your name is : <input id="zone" autocomplete="off">
 <button id="test">click !</button>
