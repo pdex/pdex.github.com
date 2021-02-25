@@ -43,10 +43,11 @@ def add_suffix(days):
 def main(today):
   print("Mar %s 2020" % add_suffix((today-date(2020,3,1)).days+1))
 
-
-main(date.today())
-
-
+def getsoup():
+  today = date.today()
+  soup = "Mar %s 2020" % add_suffix((today-date(2020,3,1)).days+1)
+  print(soup)
+  return soup
 
 from browser import document, alert
 from browser.widgets.dialog import InfoDialog
@@ -55,8 +56,10 @@ def echo(ev):
     InfoDialog("Hello", f"Hello {document['zone'].value} !")
 
 document["test"].bind("click", echo)
+document["soup"].innerText = getsoup()
 </script>
 <p>Your name is : <input id="zone" autocomplete="off">
 <button id="test">click !</button>
+  <p>Today is <span id="soup"></span></p>
 </body> 
 </html>
